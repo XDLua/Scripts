@@ -195,7 +195,7 @@ local function floatWarp(targetPosition)
     
     if isWarping then
         HumanoidRootPart.CFrame = CFrame.new(targetPosition)
-        for _ = 1, 5 do -- ยึด 0.5 วินาที
+        for _ = 1, 20 do -- ยึด 0.5 วินาที
             if not isWarping then break end
             HumanoidRootPart.CFrame = CFrame.new(targetPosition)
             task.wait(0.1)
@@ -214,7 +214,7 @@ spawn(function()
             if target then
                 DistanceLabel.Text = "ระยะ: " .. math.floor((target.Position - HumanoidRootPart.Position).Magnitude / 3) .. " เมตร"
             else
-                DistanceLabel.Text = "ระยะ: ไม่พบเป้าหมาย"
+                DistanceLabel.Text = "ระยะ: ไม่พบรถไฟ"
             end
         end
         task.wait(0.5)
