@@ -195,7 +195,7 @@ local function floatWarp(targetPosition)
     
     if isWarping then
         HumanoidRootPart.CFrame = CFrame.new(targetPosition)
-        for _ = 1, 20 do -- ยึด 0.5 วินาที
+        for _ = 1, 10 do
             if not isWarping then break end
             HumanoidRootPart.CFrame = CFrame.new(targetPosition)
             task.wait(0.1)
